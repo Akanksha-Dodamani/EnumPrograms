@@ -8,16 +8,16 @@ namespace EnumPrograms
 {
     public class Planet
     {
-        public enum Planets { Earth, Saturn, Neptune }
+        public enum Planets { Earth, Mars, Jupiter }
         public static double GetGravity(Planets planet)
         {
-            if (planet == Planets.Saturn)
+            if (planet == Planets.Mars)
             {
-                return 1.08;
+                return 0.377;
             }
-            else if (planet == Planets.Neptune)
+            else if (planet == Planets.Jupiter)
             {
-                return 1.14;
+                return 2.37;
             }
             else
             {
@@ -29,11 +29,11 @@ namespace EnumPrograms
             Console.Write("Enter weight on Earth: ");
             double weight = double.Parse(Console.ReadLine());
 
-            double saturnWeight = weight * GetGravity(Planets.Saturn);
-            double neptuneWeight = weight * GetGravity(Planets.Neptune);
+            double marsWeight = weight * GetGravity(Planets.Mars);
+            double jupiterWeight = weight * GetGravity(Planets.Jupiter);
 
-            Console.WriteLine("Weight on Saturn: " + saturnWeight + " kg");
-            Console.WriteLine("Weight on Neptune: " + neptuneWeight + " kg");
+            Console.WriteLine("Weight on Mars: " + marsWeight + " kg");
+            Console.WriteLine("Weight on Jupiter: " + jupiterWeight + " kg");
         }
     }
 }
