@@ -19,6 +19,9 @@ namespace EnumPrograms
             {
                 Console.WriteLine("Invalid signal input.");
             }
+
+            // PLANET ENUM
+            Planet.WeightOnPlanets();
         }
     }
 }
